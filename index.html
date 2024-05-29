@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/nbe0mhe.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+</head>
+
+<body>
+    <main>
+        <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc5la3tcoJmWsUymfyegxB6WUorqhPX3R56KJEGwvbvogiJTA/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" seamless="seamless">Cargando…</iframe>
+
+
+
+        <section class="content">
+            <h2 class="content__title content__title--number">Código de vestimenta</h2>
+            <p class="content__subtitle">Por favor, toma en cuenta nuestras sugerencias</p>
+
+            <div class="panel">
+                <div class="panel__item section">
+                    <div class="panel__item-imgwrap">
+                        <img class="panel__item-img" src="img/1.jpg" alt="Some image"/>
+                    </div>
+                    <div class="panel__item-text deactivated">
+                        <h3 class="panel__item-title">
+                            <span>Vestimenta</span>
+                            <span>para</span>
+                            <span>mujer</span>
+                        </h3>
+                        <div class="panel__item-subtitle">
+                            <span>Estilo Boho chic</span>
+                            <h4>
+                                <ul>
+                                    <li>Vestido midi o largo</li>
+                                    <li>Colores pastel</li>
+                                    <li>Tacos</li>
+                                    <li>Accesorios</li>
+                                </ul>
+                            </h4>
+                        </div>
+                        <button onclick="resetStylesCVL()" class="panel__item-close">
+                            <span>Cerrar</span>
+                        </button>
+                    </div>
+                    <button onclick="resetStylesCVL()" class="panel__item-close2 deactivated">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+
+                <div class="panel__item section">
+                    <div class="panel__item-imgwrap">
+                        <img class="panel__item-img" src="img/2.jpg" alt="Some image"/>
+                    </div>
+                    <div class="panel__item-text deactivated">
+                        <h3 class="panel__item-title">
+                            <span>Vestimenta</span>
+                            <span>para</span>
+                            <span>hombre</span>
+                        </h3>
+                        <div class="panel__item-subtitle">
+                            <span>Estilo Boho chic</span>
+                            <h4>
+                                <ul style="list-style: none;">
+                                    <li>Traje de gala</li>
+                                </ul>
+                            </h4>
+                        </div>
+                        <button onclick="resetStylesCVR()" class="panel__item-close">
+                            <span>Cerrar</span>
+                        </button>
+                    </div>
+                    <button  onclick="resetStylesCVR()"class="panel__item-close2 deactivated">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2 class="content__title content__title--number">Asistencia</h2>
+            <p class="content__subtitle">Registro de asistencia y más detalles</p>
+            <div class="panel">
+                <div class="panel__item section">
+                    <div class="panel__item-imgwrap"><img class="panel__item-img" src="img/5.gif" alt="Some image" /></div>
+                    <div class="panel__item-text deactivated">
+                        <h3 class="panel__item-title">
+                            <span>Confirma</span>
+                            <span>tu</span>
+                            <span>Asistencia</span>
+                        </h3>
+                        <div class="panel__item-subtitle">
+                            <span>Ayúdanos registrando tu asistencia en el siguiente formulario</span>
+                            <h4 style="text-align: center;">Haz click<span id="attent_form"> aquí </span>para abrir
+                                el formulario</h4>
+                        </div>
+                        <button  onclick="resetStylesA()" class="panel__item-close"><span>Cerrar</span></button>
+                    </div>
+                    <button  onclick="resetStylesA()"class="panel__item-close2 deactivated">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2 class="content__title content__title--number">Lugar</h2>
+            <p class="content__subtitle">Mapa del evento</p>
+            <div class="panel">
+                <div class="panel__item">
+                    <div class="panel__item-imgwrap">
+                        <img class="panel__item-img" src="img/4.jpg" alt="Some image" />
+                    </div>
+                    <div class="panel__item-text deactivated">
+                        <h3 class="panel__item-title">
+                            <span>Jardín</span>
+                            <span>del</span>
+                            <span>bosque</span>
+                        </h3>
+                        <div class="panel__item-subtitle">
+                            <span>Vía Azogues - Cuenca, Javier Loyola (Chuquipata), Ecuador</span>
+                            <h4 style="text-align: center;">Un estilo en el que el amor ❤️ se respira y se aprecia en
+                                cada detalle al aire libre, rodeados de un bosque.</h4>
+                        </div>
+                        <button class="panel__item-close"><span>Cerrar</span></button>
+                    </div>
+                </div>
+
+                <div class="panel__item">
+                    <div class="panel__item-imgwrap">
+                        <iframe class="panel__item-img panel__item-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.9924066120125!2d-78.89800682523126!3d-2.8183480971585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd11f50e1274a3%3A0xc276b82eaf42477e!2sJard%C3%ADn%20del%20Bosque!5e0!3m2!1ses!2sec!4v1714703143344!5m2!1ses!2sec"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <button class="panel__item-close"><span>Cerrar</span></button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
