@@ -9,6 +9,7 @@
 }
 
 body {
+	counter-reset: section;
 	width: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
@@ -61,6 +62,7 @@ main {
 }
 
 .content__title {
+	counter-increment: section;
 	font-family: ivypresto-display, serif;
 	font-weight: 300;
 	margin: 0;
@@ -75,7 +77,6 @@ main {
 }
 
 .content__title--number::before {
-	counter-increment: section;
 	content: counter(section, decimal-leading-zero);
 	position: absolute;
 	left: 1.5rem;
