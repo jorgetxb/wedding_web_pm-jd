@@ -10,8 +10,31 @@
 
 <body>
     <main>
+        <!-- hero -->
+        <div id="video_container">
+            <video class="video" id="video" playsinline loop src="videos/7.mp4"></video>
+            <div class="frame">
+                <div class="frame__content">
+                    <div class="wrapper">
+                        <h3 class="frame__content-subtitle">Wedding</h3>
+                        <h2 class="frame__content-title">Paula & Juan</h2>
+                        <p class="frame__content-text">Noviembre 16, 2024</p>
+                    </div>
+                    <nav class="frame__switch" id="nav">
+                        <a class="frame__switch-item">Más Info</a>
+                    </nav>
+                </div>
+            </div>
+    
+            <button class="frame__button" id="intro">
+                <svg viewBox="0 0 60 60" width="120" height="120"><path d="M45.563 29.174l-22-15A1 1 0 0022 15v30a.999.999 0 001.563.826l22-15a1 1 0 000-1.652zM24 43.107V16.893L43.225 30 24 43.107z"/><path d="M30 0C13.458 0 0 13.458 0 30s13.458 30 30 30 30-13.458 30-30S46.542 0 30 0zm0 58C14.561 58 2 45.439 2 30S14.561 2 30 2s28 12.561 28 28-12.561 28-28 28z"/></svg>
+            </button>
+        </div>
+        
+        <!-- form -->
         <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc5la3tcoJmWsUymfyegxB6WUorqhPX3R56KJEGwvbvogiJTA/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" seamless="seamless">Cargando…</iframe>
 
+        <!-- menu -->
         <section class="content">
             <h2 class="content__title content__title--number">Código de vestimenta</h2>
             <p class="content__subtitle">Por favor, toma en cuenta nuestras sugerencias</p>
@@ -142,6 +165,7 @@
         </section>
     </main>
     
+    <script src="js/hero.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/jqscripts.js"></script>
 </body>
