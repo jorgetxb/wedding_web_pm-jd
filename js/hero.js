@@ -1,14 +1,7 @@
 document.getElementById("intro").addEventListener("click", () => {
-      var op = 1;
-      setInterval(function () {
-        op -= 0.1;
-        document.getElementById("intro").style.opacity = op;
-      }, 50);
-
+      document.getElementById("intro").style.opacity = "0";
       document.getElementById("intro").style.display = "none";
-
       document.body.classList.add('video-started');
-
       document.getElementById("video").play()
   }
 )
