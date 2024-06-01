@@ -203,7 +203,7 @@ body {
 	counter-reset: section;
 	width: 100%;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	margin: 0;
 	font-family: niveau-grotesk, sans-serif;
 	background-position: center;
@@ -230,9 +230,16 @@ a {
 
 li {
 	margin: 1rem 0;
+	text-align: left;
+	display: flex;
+}
+
+li span {
+	font-weight: bolder;
 }
 
 .content {
+	margin: auto;
 	position: relative;
 	max-width: 1080px;
 }
@@ -378,7 +385,13 @@ li {
 	margin: auto;
 	font-size: 2vh;
 	width: 100%;
-	max-width: 500px;
+	max-width: 768px;
+}
+
+.panel__item-subtitle p {
+	margin-top: 2rem;
+	padding-left: 0.75rem;
+	font-size: 0.75rem;
 }
 
 .panel__item-subtitle > span {
@@ -391,7 +404,7 @@ li {
 	width: 100%;
 	max-width: 350px;
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 3.5vh;
 }
 
 .panel__item-subtitle h4 {
@@ -413,6 +426,28 @@ li {
 
 .panel__item-subtitle h4 span.char {
 	will-change: transform, opacity;
+}
+
+.white_button {
+	margin: 0 0.25rem;
+	padding: 0.25rem;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #4a4a4a;
+	line-height: 2;
+}
+
+.green_button {
+	margin: 0 0.25rem;
+	padding: 0.25rem;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #4a4a4a;
+	color: white;
+	background-color: rgb(24, 139, 34);
+	line-height: 2;
 }
 
 .panel__item-close {

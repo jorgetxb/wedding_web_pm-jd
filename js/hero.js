@@ -8,6 +8,8 @@ document.getElementById("intro").addEventListener("click", () => {
 
 document.querySelector("#nav").addEventListener('click', () => {
   var hero = $("#video_container");
+  var unlock = document.body;
+  unlock.style.overflowY = "auto";
   hero.animate(
     { height: "toggle" },
     {duration: 2000,
