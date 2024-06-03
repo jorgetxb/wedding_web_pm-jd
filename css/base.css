@@ -334,8 +334,6 @@ li span {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	align-self: start;
-	width: min-content;
 	cursor: pointer;
 }
 
@@ -346,6 +344,7 @@ li span {
 	height: 43.2vw;
 	max-height: 360px;
 	display: block;
+	transition: height 1s ease-in, opacity 1s ease-in;
 }
 
 .panel__item-title {
@@ -392,6 +391,7 @@ li span {
 	margin-top: 2rem;
 	padding-left: 0.75rem;
 	font-size: 0.75rem;
+	text-align: center;
 }
 
 .panel__item-subtitle > span {
