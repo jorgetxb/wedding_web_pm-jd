@@ -73,3 +73,8 @@ Array.from(img_trigger).forEach((div, index) => {
     }
   });
 });
+
+
+/*********Inhabilitar función Obsequios Texto*********/
+
+document.getElementById("disable").removeEventListener("click");

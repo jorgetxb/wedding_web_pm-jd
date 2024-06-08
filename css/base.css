@@ -450,55 +450,6 @@ li span {
 	line-height: 2;
 }
 
-.panel__item-close {
-	border: 0;
-	padding: 3px;
-	position: relative;
-	background: none;
-	cursor: pointer;
-	align-self: unset;
-	border: none;
-	border-radius: none;
-	background-color: unset;
-	color: black;
-	width: 85%;
-	margin-left: -15vw;
-	z-index: 999;
-}
-
-@media screen and (min-width: 760px) {
-	.panel__item-close {
-		margin-left: -10vw;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	.panel__item-close {
-		margin-left: -25vw;
-	}
-}
-
-.panel__item-close span {
-	display: none;
-}
-
-.panel__item-close::before,
-.panel__item-close::after {
-	content: '';
-	width: 1px;
-	height: 100%;
-	background: currentColor;
-	position: absolute;
-	transform-origin: 50% 50%;
-	left: 50%;
-	top: 0;
-	transform: scale(1.15) rotate(32deg);
-}
-
-.panel__item-close::after {
-	transform: scale(1.15) rotate(-32deg);
-}
-
 .form {
 	display: none;
 	position: fixed;
