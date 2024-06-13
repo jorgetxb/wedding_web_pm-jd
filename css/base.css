@@ -492,11 +492,17 @@ li span {
 /************Gallery**************/
 
 .pictures {
-  height: 30vh;
+  height: 50vh;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 760px) {
+    .pictures {
+        height: 33vh;
+      }
 }
 
 .pictures:hover .picture:nth-child(4) {
@@ -529,7 +535,7 @@ li span {
 
 .picture {
   position: absolute;
-  height: 27.5vh;
+  height: 30vh;
   width: auto;
   border: 5px solid #fff;
   border-bottom-width: 15px;
