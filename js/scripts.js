@@ -88,13 +88,20 @@ Array.from(img_trigger).forEach((div, index) => {
 
 var attent_form = document.getElementById("attent_form");
 var form = document.getElementById("form");
+var formw = document.getElementById("form_wrapper");
 
 attent_form.addEventListener("click", () => {
-  document.getElementById("form").style.display = "block";
+  form.style.display = "block";
+  formw.style.display = "block";
+  document.body.style.overflowY = "hidden";
 });
 
-if (form.is(":visible")) {
-  document.main.addEventListener("click", () => {
-    form.style.display = "none";
-  })
-}
+formw.addEventListener("click", () => {
+  if (form.style.display = "block") {
+      formw.addEventListener("click", () => {
+      form.style.display = "none";
+      formw.style.display = "none";
+      document.body.style.overflowY = "auto";
+    })
+  }
+})

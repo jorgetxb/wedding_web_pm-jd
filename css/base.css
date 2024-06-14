@@ -197,6 +197,7 @@ h3 {
 
 .frame__content-text,
 .frame__switch {
+  margin-top: -2vh;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -470,6 +471,16 @@ li span {
   color: white;
   background-color: rgb(24, 139, 34);
   line-height: 2;
+}
+
+#form_wrapper {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.33);
+  backdrop-filter: blur(5px);
+  z-index: 98;
 }
 
 #form {
