@@ -9,19 +9,24 @@ Array.from(img_trigger).forEach((div, index) => {
     position = index;
     var details = $(".panel__item-subtitle").eq(position);
     if (details.is(":visible")) {
-      
-      if (index%2 === 0) {
-        elementos[index - 1].style.display = 'block';
-        elementos[index - 1].style.opacity = '1';
-        elementos[index - 1].style.width = "30vw";
+
+      if (index == 0) {
         deactivated[index].style.width = "0vw";
         deactivated[index].style.opacity = '0';
       } else {
-        elementos[index + 1].style.display = 'block';
-        elementos[index + 1].style.opacity = '1';
-        elementos[index + 1].style.width = "30vw";
-        deactivated[index].style.width = "0vw";
-        deactivated[index].style.opacity = '0';
+        if (index%2 === 0) {
+          elementos[index - 1].style.display = 'block';
+          elementos[index - 1].style.opacity = '1';
+          elementos[index - 1].style.width = "30vw";
+          deactivated[index].style.width = "0vw";
+          deactivated[index].style.opacity = '0';
+        } else {
+          elementos[index + 1].style.display = 'block';
+          elementos[index + 1].style.opacity = '1';
+          elementos[index + 1].style.width = "30vw";
+          deactivated[index].style.width = "0vw";
+          deactivated[index].style.opacity = '0';
+        }
       }
 
       details.animate(
@@ -40,18 +45,23 @@ Array.from(img_trigger).forEach((div, index) => {
       );
     } else {
 
-      if (index%2 === 0) {
-        elementos[index - 1].style.opacity = '0'; //CV right side
-        elementos[index - 1].style.width = "0vw"; //CV right side
+      if (index == 0) {
         deactivated[index].style.width = "55vw"; //Title
         deactivated[index].style.opacity = '1'; //Title
-        setTimeout(function() {elementos[index - 1].style.display = 'none';}, 1000);
       } else {
-        elementos[index + 1].style.opacity = '0'; //CV right side
-        elementos[index + 1].style.width = "0vw"; //CV right side
-        deactivated[index].style.width = "55vw"; //Title
-        deactivated[index].style.opacity = '1'; //Title
-        setTimeout(function() {elementos[index + 1].style.display = 'none';}, 1000);
+        if (index%2 === 0) {
+          elementos[index - 1].style.opacity = '0'; //CV right side
+          elementos[index - 1].style.width = "0vw"; //CV right side
+          deactivated[index].style.width = "55vw"; //Title
+          deactivated[index].style.opacity = '1'; //Title
+          setTimeout(function() {elementos[index - 1].style.display = 'none';}, 1000);
+        } else {
+          elementos[index + 1].style.opacity = '0'; //CV right side
+          elementos[index + 1].style.width = "0vw"; //CV right side
+          deactivated[index].style.width = "55vw"; //Title
+          deactivated[index].style.opacity = '1'; //Title
+          setTimeout(function() {elementos[index + 1].style.display = 'none';}, 1000);
+        }
       }
 
       details.css("display", "block");
@@ -73,3 +83,18 @@ Array.from(img_trigger).forEach((div, index) => {
     }
   });
 });
+
+/***Activar Form***/
+
+var attent_form = document.getElementById("attent_form");
+var form = document.getElementById("form");
+
+attent_form.addEventListener("click", () => {
+  document.getElementById("form").style.display = "block";
+});
+
+if (form.is(":visible")) {
+  document.main.addEventListener("click", () => {
+    form.style.display = "none";
+  })
+}

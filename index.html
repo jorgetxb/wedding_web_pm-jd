@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/nbe0mhe.css">
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ylw1llk.css">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +16,22 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
+
+    <div id="loader">
+        <div id="loader_lottie">
+            <lottie-player src="./img/loader/hummingbird.json" background="transparent" speed="0.75"
+                    style="width: 100%; height: 100%" loop autoplay></lottie-player>
+        </div>
+    </div>
+
     <main>
         <!-- hero -->
         <div id="video_container">
-            <video class="video" id="video" playsinline loop src="videos/7.mp4"></video>
+            <video class="video" id="video" playsinline loop src="video/ww_p&j.mp4"></video>
             <div class="frame">
                 <div class="frame__content">
                     <div class="wrapper">
@@ -43,7 +51,7 @@
         </div>
 
         <!-- form -->
-        <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc5la3tcoJmWsUymfyegxB6WUorqhPX3R56KJEGwvbvogiJTA/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" seamless="seamless">Cargando…</iframe>
+        <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc5la3tcoJmWsUymfyegxB6WUorqhPX3R56KJEGwvbvogiJTA/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" seamless="seamless">Cargando…</iframe>
 
         <!-- menu -->
         <section class="content">
@@ -226,6 +234,8 @@
             </div>
         </section>
 
+        <!-- Gallery -->
+
         <section class="content">
             <h2 class="content__title content__title--number">Galería</h2>
             <p class="content__subtitle">Nuestra galería</p>
@@ -234,26 +244,31 @@
                 <div class="panel__item section">
                     <div class="panel__item-imgwrap">
                         <div class='pictures'>
-                            <img class='picture' src='./img/gallery/1.jpg'>
-                            <img class='picture' src='./img/gallery/2.jpg'> 
-                            <img class='picture' src='./img/gallery/3.jpg'> 
-                            <img class='picture' src='./img/gallery/4.jpg'> 
-                            <img class='picture' src='./img/gallery/5.jpg'>
-                            <img class='picture' src='./img/gallery/6.jpg'>
-                            <img class='picture' src='./img/gallery/7.jpg'>
                             <img class='picture' src='./img/gallery/8.jpg'>
+                            <img class='picture' src='./img/gallery/7.jpg'> 
+                            <img class='picture' src='./img/gallery/6.jpg'> 
+                            <img class='picture' src='./img/gallery/5.jpg'> 
+                            <img class='picture' src='./img/gallery/4.jpg'>
+                            <img class='picture' src='./img/gallery/3.jpg'>
+                            <img class='picture' src='./img/gallery/2.jpg'>
+                            <img class='picture' src='./img/gallery/1.jpg'>
                         </div>
                     </div>
                 </div>
 
             </div>
         </section>
-
-    <!-- Gallery -->
-
-
-  
     </main>
+
+    <script>
+        // Espera a que todo el contenido se haya cargado
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+                loader.style.display = "none"; // Oculta el loader después de 2 segundos
+            }, 2000);
+        });
+    </script>
     
     <script src="js/hero.js"></script>
     <script src="js/scripts.js"></script>
