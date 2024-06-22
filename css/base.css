@@ -8,6 +8,30 @@
   font-size: 18px;
 }
 
+h2 {
+  font-family: "Whisper", cursive;
+  font-size: clamp(25px, 15vw, 150px);
+  margin: 0;
+}
+
+h3 {
+  font-family: "Whisper", cursive;
+  font-size: clamp(15px, 8vw, 100px);
+  font-weight: 400;
+  margin: 0;
+}
+
+h4 {
+  text-align: center;
+  font-family: "Whisper", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+ul {
+  list-style-type: circle;
+}
+
 /*****************LOADER*****************/
 
 #loader {
@@ -27,19 +51,6 @@
 }
 
 /*****************HERO*****************/
-
-h2 {
-  font-family: "Whisper", cursive;
-  font-size: clamp(25px, 15vw, 150px);
-  margin: 0;
-}
-
-h3 {
-  font-family: "Whisper", cursive;
-  font-size: clamp(15px, 8vw, 100px);
-  font-weight: 400;
-  margin: 0;
-}
 
 .hero {
   background-image: linear-gradient(
@@ -100,16 +111,10 @@ h3 {
   border: 0;
   margin: 0;
   padding: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   fill: #fff;
   width: 60px;
   height: 60px;
   cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -146,7 +151,10 @@ h3 {
   font-size: 1rem;
   margin: 2rem auto 3rem;
   color: #fff;
+  font-family: roboto, cursive;
+  font-weight: lighter;
 }
+
 
 .video-started .frame__content-text,
 .video-started .frame__switch,
@@ -226,7 +234,7 @@ body {
   counter-reset: section;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   margin: 0;
   font-family: niveau-grotesk, sans-serif;
   background-position: center;
@@ -254,22 +262,29 @@ a {
 li {
   margin: 1rem 0;
   text-align: left;
-  display: flex;
 }
 
 li span {
   font-weight: bolder;
 }
 
+p {
+  font-family: roboto, sans-serif;
+  font-weight: lighter;
+}
+
 .content {
   margin: auto;
   position: relative;
   max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content__title {
   counter-increment: section;
-  font-family: ivypresto-display, serif;
   font-weight: 300;
   margin: 0;
   position: relative;
@@ -299,8 +314,95 @@ li span {
   font-size: 0.75rem;
 }
 
-.panel {
+#hero_img {
+  width: 100%;
+  height: auto;
+  max-height: 750px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#welcome {
+  margin: 5vh 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 85%;
+  max-width: 400px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto, sans-serif;
+  font-weight: lighter;
+}
+
+.content-title_index {
+  border: 1px solid;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.content-title {
+  margin: 0;
+  padding-bottom: 1rem;
+  line-height: 1;
+  color: black;
+  position: relative;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  font-size: 4rem;
+}
+
+.content-date {
+  text-align: center;
+  font-size: 1rem;
+  margin: 2vh auto;
+  font-family: roboto, cursive;
+  font-weight: lighter;
+}
+
+.content-text {
+  text-align: center;
+  font-size: 1rem;
+  margin: 2vh auto;
+  font-family: "Handlee", cursive;
+}
+
+.content__title_index {
+  counter-increment: section;
+  font-family: ivypresto-display, serif;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  font-size: 2.778rem;
+}
+
+.content-title_index li {
+  cursor: pointer;
+}
+
+.divisor {
+  width: 50%;
+  max-width: 100px;
+  margin: 5vh auto;
+  height: 1vh;
+  border-top: solid 1px black;
+}
+
+#calendar {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+}
+
+.panel {
+  width: 75%;
   margin: 2.5vh auto 5vh auto;
   display: flex;
   justify-content: space-around;
@@ -576,6 +678,12 @@ li span {
   -o-transition: -o-transform 0.3s ease-in-out;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+  .picture {
+    height: 40vh;
+  }
 }
 
 .picture:first-child {
