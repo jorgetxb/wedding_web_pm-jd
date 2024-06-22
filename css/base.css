@@ -8,6 +8,30 @@
   font-size: 18px;
 }
 
+body {
+  counter-reset: section;
+  width: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  margin: 0;
+  font-family: niveau-grotesk, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    background-image: url("../img/wallpaper1.svg");
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    background-image: url("../img/wallpaper2.svg");
+  }
+}
+
 h2 {
   font-family: "Whisper", cursive;
   font-size: clamp(25px, 15vw, 150px);
@@ -23,13 +47,32 @@ h3 {
 
 h4 {
   text-align: center;
-  font-family: "Whisper", sans-serif;
+  font-family: "Whisper", cursive;
   font-size: 2rem;
   margin: 0;
 }
 
+p {
+  font-family: roboto, sans-serif;
+  font-weight: lighter;
+}
+
 ul {
   list-style-type: circle;
+}
+
+li {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+li span {
+  font-weight: bolder;
+}
+
+a {
+  color: #fff;
+  outline: none;
 }
 
 /*****************LOADER*****************/
@@ -229,49 +272,6 @@ ul {
 }
 
 /****************MENU******************/
-
-body {
-  counter-reset: section;
-  width: 100%;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
-  margin: 0;
-  font-family: niveau-grotesk, sans-serif;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media screen and (orientation: portrait) {
-  body {
-    background-image: url("../img/wallpaper1.svg");
-  }
-}
-
-@media screen and (orientation: landscape) {
-  body {
-    background-image: url("../img/wallpaper2.svg");
-  }
-}
-
-a {
-  color: #fff;
-  outline: none;
-}
-
-li {
-  margin: 1rem 0;
-  text-align: left;
-}
-
-li span {
-  font-weight: bolder;
-}
-
-p {
-  font-family: roboto, sans-serif;
-  font-weight: lighter;
-}
 
 .content {
   margin: auto;
