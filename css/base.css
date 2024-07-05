@@ -237,10 +237,11 @@ a {
 
 .frame__switch-item {
   cursor: pointer;
+  color: white;
   padding: 0.85rem 1.25rem;
   border: 1px solid #fff;
   border-radius: 25px;
-  font-family: ivypresto-headline, serif;
+  font-family: Handlee, cursive;
   font-weight: 300;
   font-size: 1.85rem;
   margin: 0 1rem;
@@ -557,7 +558,7 @@ a {
   will-change: transform, opacity;
 }
 
-.white_button {
+.white {
   margin: 0 0.25rem;
   padding: 0.25rem;
   border-radius: 5px;
@@ -565,9 +566,10 @@ a {
   border-width: 1px;
   border-color: #4a4a4a;
   line-height: 2;
+  min-width: 75px;
 }
 
-.green_button {
+.lilac {
   margin: 0 0.25rem;
   padding: 0.25rem;
   border-radius: 5px;
@@ -575,9 +577,24 @@ a {
   border-width: 1px;
   border-color: #4a4a4a;
   color: white;
-  background-color: rgb(24, 139, 34);
+  background-color: #c0a4c9;
   line-height: 2;
+  min-width: 75px;
 }
+
+.negro {
+  margin: 0 0.25rem;
+  padding: 0.25rem;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4a4a4a;
+  color: white;
+  background-color: black;
+  line-height: 2;
+  min-width: 75px;
+}
+
 
 #form_wrapper {
   display: none;
