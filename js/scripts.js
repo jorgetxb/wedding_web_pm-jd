@@ -42,12 +42,12 @@ Array.from(img_trigger).forEach((div, index) => {
         if (index == 0 || index%2 === 0) {
           elementos[index + 2].style.opacity = '0'; //CV right side
           elementos[index + 2].style.width = "0vw"; //CV right side
-          deactivated[index].style.width = "55vw"; //Title
+          deactivated[index].style.width = "45vw"; //Title
           deactivated[index].style.opacity = '1'; //Title
         } else {
           elementos[index].style.opacity = '0'; //CV right side
           elementos[index].style.width = "0vw"; //CV right side
-          deactivated[index].style.width = "55vw"; //Title
+          deactivated[index].style.width = "45vw"; //Title
           deactivated[index].style.opacity = '1'; //Title
           setTimeout(function() {elementos[index].style.display = 'none';}, 0);
         }

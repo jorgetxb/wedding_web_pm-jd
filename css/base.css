@@ -307,7 +307,8 @@ a {
 
 .content__title--number {
   padding: 0 0 0 3.5rem;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
+  margin-top: 7.5vh;
   align-self: start;
   font-size: 1.25rem;
 }
@@ -438,7 +439,7 @@ a {
 }
 
 #calendar {
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   height: auto;
   object-fit: contain;
@@ -447,7 +448,7 @@ a {
 
 .panel {
   width: 75%;
-  margin: 2.5vh auto 5vh auto;
+  margin: 2.5vh auto 2vh auto;
   display: flex;
   justify-content: space-around;
   transition: height 1s ease-in, opacity 1s ease-in;
@@ -560,7 +561,7 @@ a {
 .panel__item-subtitle-noi {
   margin: auto;
   font-size: 2vh;
-  width: 100%;
+  width: 80%;
   max-width: 768px;
 }
 
@@ -573,14 +574,13 @@ a {
 }
 
 .panel__item-subtitle-noi p {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-left: 0.75rem;
   font-size: 2vh;
   text-align: center;
 }
 
 .panel__item-subtitle p {
-  margin-top: 2rem;
   padding-left: 0.75rem;
   font-size: 2vh;
   text-align: center;
@@ -590,8 +590,6 @@ a {
   display: block;
   font-family: "Whisper", cursive;
   margin: auto;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
   position: relative;
   width: 100%;
   max-width: 350px;
@@ -746,17 +744,11 @@ a {
 /************Gallery**************/
 
 .pictures {
-  height: 50vh;
+  height: 35vh;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 760px) {
-    .pictures {
-        height: 33vh;
-      }
 }
 
 .pictures:hover .picture:nth-child(4) {
@@ -845,17 +837,17 @@ a {
 }
 
 .picture.slide-right {
-  -moz-transform: rotate(-60deg) translateX(250px);
-  -ms-transform: rotate(-60deg) translateX(250px);
-  -webkit-transform: rotate(-60deg) translateX(250px);
-  transform: rotate(-60deg) translateX(250px);
+  -moz-transform: rotate(-60deg) translateX(200px);
+  -ms-transform: rotate(-60deg) translateX(200px);
+  -webkit-transform: rotate(-60deg) translateX(200px);
+  transform: rotate(-60deg) translateX(200px);
 }
 
 .picture.slide-left {
-  -moz-transform: rotate(-290deg) translateX(-250px);
-  -ms-transform: rotate(-290deg) translateX(-250px);
-  -webkit-transform: rotate(-290deg) translateX(-250px);
-  transform: rotate(-290deg) translateX(-250px);
+  -moz-transform: rotate(-290deg) translateX(-200px);
+  -ms-transform: rotate(-290deg) translateX(-200px);
+  -webkit-transform: rotate(-290deg) translateX(-200px);
+  transform: rotate(-290deg) translateX(-200px);
 }
 
 .picture.back {
