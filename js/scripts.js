@@ -9,25 +9,20 @@ Array.from(img_trigger).forEach((div, index) => {
     position = index;
     var details = $(".panel__item-subtitle").eq(position);
     if (details.is(":visible")) {
-
-      if (index == 0) {
-        deactivated[index].style.width = "0vw";
-        deactivated[index].style.opacity = '0';
-      } else {
-        if (index%2 === 0) {
-          elementos[index - 1].style.display = 'block';
-          elementos[index - 1].style.opacity = '1';
-          elementos[index - 1].style.width = "30vw";
+        if (index == 0 || index%2 === 0) {
+          elementos[index + 2].style.display = 'block';
+          elementos[index + 2].style.opacity = '1';
+          elementos[index + 2].style.width = "30vw";
           deactivated[index].style.width = "0vw";
           deactivated[index].style.opacity = '0';
         } else {
-          elementos[index + 1].style.display = 'block';
-          elementos[index + 1].style.opacity = '1';
-          elementos[index + 1].style.width = "30vw";
+          elementos[index].style.display = 'block';
+          elementos[index].style.opacity = '1';
+          elementos[index].style.width = "30vw";
           deactivated[index].style.width = "0vw";
           deactivated[index].style.opacity = '0';
         }
-      }
+      
 
       details.animate(
         { height: "toggle" },
@@ -44,25 +39,18 @@ Array.from(img_trigger).forEach((div, index) => {
         }
       );
     } else {
-
-      if (index == 0) {
-        deactivated[index].style.width = "55vw"; //Title
-        deactivated[index].style.opacity = '1'; //Title
-      } else {
-        if (index%2 === 0) {
-          elementos[index - 1].style.opacity = '0'; //CV right side
-          elementos[index - 1].style.width = "0vw"; //CV right side
+        if (index == 0 || index%2 === 0) {
+          elementos[index + 2].style.opacity = '0'; //CV right side
+          elementos[index + 2].style.width = "0vw"; //CV right side
           deactivated[index].style.width = "55vw"; //Title
           deactivated[index].style.opacity = '1'; //Title
-          setTimeout(function() {elementos[index - 1].style.display = 'none';}, 1000);
         } else {
-          elementos[index + 1].style.opacity = '0'; //CV right side
-          elementos[index + 1].style.width = "0vw"; //CV right side
+          elementos[index].style.opacity = '0'; //CV right side
+          elementos[index].style.width = "0vw"; //CV right side
           deactivated[index].style.width = "55vw"; //Title
           deactivated[index].style.opacity = '1'; //Title
-          setTimeout(function() {elementos[index + 1].style.display = 'none';}, 1000);
+          setTimeout(function() {elementos[index].style.display = 'none';}, 0);
         }
-      }
 
       details.css("display", "block");
       details.css("height", "0px");
@@ -84,24 +72,40 @@ Array.from(img_trigger).forEach((div, index) => {
   });
 });
 
-/***Activar Form***/
+/***Active Forms***/
 
 var attent_form = document.getElementById("attent_form");
-var form = document.getElementById("form");
+var music_form = document.getElementById("music_form");
+var gifts_info = document.getElementById("gifts_info");
+var form_1 = document.getElementById("form_1");
+var form_2 = document.getElementById("form_2");
+var bank_account_info = document.getElementById("bank_account_info");
 var formw = document.getElementById("form_wrapper");
 
 attent_form.addEventListener("click", () => {
-  form.style.display = "block";
+  form_1.style.display = "block";
+  formw.style.display = "block";
+  document.body.style.overflowY = "hidden";
+});
+
+music_form.addEventListener("click", () => {
+  form_2.style.display = "block";
+  formw.style.display = "block";
+  document.body.style.overflowY = "hidden";
+});
+
+gifts_info.addEventListener("click", () => {
+  bank_account_info.style.display = "block";
   formw.style.display = "block";
   document.body.style.overflowY = "hidden";
 });
 
 formw.addEventListener("click", () => {
-  if (form.style.display = "block") {
-      formw.addEventListener("click", () => {
-      form.style.display = "none";
-      formw.style.display = "none";
-      document.body.style.overflowY = "auto";
-    })
-  }
+  formw.addEventListener("click", () => {
+  form_1.style.display = "none";
+  form_2.style.display = "none";
+  bank_account_info.style.display = "none";
+  formw.style.display = "none";
+  document.body.style.overflowY = "auto";
+})
 })

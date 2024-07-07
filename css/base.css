@@ -35,8 +35,14 @@ body {
   }
 }
 
+h1 {
+  font-family: Whisper, cursive;
+  font-size: clamp(25px, 15vw, 150px);
+  margin: 0;
+}
+
 h2 {
-  font-family: "Whisper", cursive;
+  font-family: Roboto, sans-serif;
   font-size: clamp(25px, 15vw, 150px);
   margin: 0;
 }
@@ -301,8 +307,9 @@ a {
 
 .content__title--number {
   padding: 0 0 0 3.5rem;
+  margin-bottom: 5vh;
   align-self: start;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .content__title--number::before {
@@ -315,11 +322,21 @@ a {
   align-items: center;
 }
 
+.info {
+  margin: 0 0 0 5vw;
+  align-self: start;
+  padding: 1rem 0 1rem 10vw;
+  font-size: 0.75rem;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+}
+
 .content__subtitle {
   margin: 0;
   align-self: start;
-  padding: 1rem 3.5rem;
-  font-size: 1rem;
+  padding: 1rem 0 1rem 10vw;
+  font-size: 3vh;
+  font-family: Whisper, cursive;
 }
 
 #hero_img {
@@ -401,6 +418,25 @@ a {
   border-top: solid 1px black;
 }
 
+#countdown {
+  display: flex;
+  justify-content: center;
+  font-family: Whisper, sans-serif;
+}
+#countdown div {
+  text-align: center;
+  margin: 0 7px;
+}
+#countdown span {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: #333;
+}
+.smalltext {
+  font-size: 1rem;
+  color: #666;
+}
+
 #calendar {
   width: 100%;
   max-width: 500px;
@@ -461,6 +497,14 @@ a {
   }
 }
 
+.panel__item-imgwrap-noi {
+  position: relative;
+  border-radius: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .panel__item-imgwrap {
   position: relative;
   border-radius: 0.35rem;
@@ -478,6 +522,7 @@ a {
   max-height: 360px;
   display: block;
   transition: height 1s ease-in, opacity 1s ease-in;
+  border-radius: 15px;
 }
 
 .panel__item-title {
@@ -512,12 +557,26 @@ a {
   display: block;
 }
 
+.panel__item-subtitle-noi {
+  margin: auto;
+  font-size: 2vh;
+  width: 100%;
+  max-width: 768px;
+}
+
 .panel__item-subtitle {
   display: none;
   margin: auto;
   font-size: 2vh;
   width: 100%;
   max-width: 768px;
+}
+
+.panel__item-subtitle-noi p {
+  margin-top: 2rem;
+  padding-left: 0.75rem;
+  font-size: 2vh;
+  text-align: center;
 }
 
 .panel__item-subtitle p {
@@ -527,9 +586,22 @@ a {
   text-align: center;
 }
 
+.panel__item-subtitle-noi > span {
+  display: block;
+  font-family: "Whisper", cursive;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
 .panel__item-subtitle > span {
   display: block;
-  font-family: "Dancing Script", cursive;
+  font-family: "Whisper", cursive;
   margin: auto;
   margin-top: 3vh;
   margin-bottom: 2vh;
@@ -609,7 +681,7 @@ a {
   z-index: 98;
 }
 
-#form {
+#form_1, #form_2 {
   display: none;
   position: fixed;
   top: 50%;
@@ -622,12 +694,39 @@ a {
   box-shadow: #4a4a4a 10px 10px 25px;
 }
 
-#form::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+#bank_account_info {
+  width: 360px;
+  height: 360px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -175px; /* Mitad negativa de la altura. */
+  margin-left: -175px; /* Mitad negativa del ancho. */
+  padding-top: 1rem;
+  background-color: white;
+  border-radius: 25px;
+  z-index: 99;
+  box-shadow: #4a4a4a 10px 10px 25px;
+}
+
+#bank_account_info > span {
+  font-family: Whisper, cursive;
+  padding: 0 0 0 2rem;
+  font-size: 3vh;
 }
 
 #attent_form {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#music_form {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#gifts_info {
   font-weight: bold;
   cursor: pointer;
 }
@@ -761,4 +860,19 @@ a {
 
 .picture.back {
   z-index: 1;
+}
+
+.app_link {
+  max-width: 50vh;
+  max-height: 60vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 760px) {
+    .app_link {
+        height: 33vh;
+      }
 }

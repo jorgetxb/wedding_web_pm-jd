@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Whisper&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
 
@@ -32,13 +31,14 @@
 
     <main>
         <!-- hero -->
-        <!-- <div id="video_container">
+        <div id="video_container">
             <video class="video" id="video" playsinline loop src="video/ww_p&j.mp4"></video>
+            <audio id="audio" src="audio/hermoso_carino.mp3" loop></audio>
             <div class="frame">
                 <div class="frame__content">
                     <div class="wrapper">
                         <h3 class="frame__content-subtitle">Wedding</h3>
-                        <h2 class="frame__content-title">Paula & Juan</h2>
+                        <h1 class="frame__content-title">Paula & Juan</h1>
                         <p class="frame__content-text">Noviembre 16, 2024</p>
                     </div>
                     <nav class="frame__switch" id="nav">
@@ -50,19 +50,31 @@
             <button class="frame__button" id="intro">
                 <svg viewBox="0 0 60 60" width="120" height="120"><path d="M45.563 29.174l-22-15A1 1 0 0022 15v30a.999.999 0 001.563.826l22-15a1 1 0 000-1.652zM24 43.107V16.893L43.225 30 24 43.107z"/><path d="M30 0C13.458 0 0 13.458 0 30s13.458 30 30 30 30-13.458 30-30S46.542 0 30 0zm0 58C14.561 58 2 45.439 2 30S14.561 2 30 2s28 12.561 28 28-12.561 28-28 28z"/></svg>
             </button>
-        </div> -->
+        </div>
 
-        <!-- form -->
+        <!-- forms -->
          <div id="form_wrapper">
-            <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc3c2ApZEAXG6fenEjm14gvYz4ffOSvIuiei0cH6bjIC3uT4w/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <iframe id="form_1" src="https://docs.google.com/forms/d/e/1FAIpQLSc3c2ApZEAXG6fenEjm14gvYz4ffOSvIuiei0cH6bjIC3uT4w/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <iframe id="form_2" src="https://docs.google.com/forms/d/e/1FAIpQLSf5IKlXQjmI6J0hvCYmh67LK87tgjBhAq6zPMQXup7f7zUXvQ/viewform?embedded=true" width="360" height="512" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <div id="bank_account_info">          
+                <span>Aquí puedes hacer tu aporte</span>
+                <ul>
+                    <li style="font-weight: bolder; text-decoration: underline;">Banco xxxxx</li>
+                    <li>Cuenta Corriente: xxxxxxxx</li>
+                    <li>Nombre: Juan Sebastián Delgado Padrón</li>
+                    <li>Cédula: 0102030405</li>
+                    <li>Email: xxxx@gmail.com</li>
+                    <li>Teléfono: +593998461602</li>
+                </ul>         
+            </div>
          </div>
 
         <!-- menu -->
         <section class="content">
             <img id="hero_img" src="./img/hero_img.png" alt="info_main">
             <div id="welcome">
-                <h2 class="content-title">Paula & Juan</h2>
-                <p class="content-date">Noviembre 16, 2024</p>
+                <h1 class="content-title">Paula & Juan</h1>
+                <p class="content-date">Noviembre 16, 2024 - <span style="font-weight: bolder;">4:00 pm</span></p>
                 <p class="content-text">"Esta foto, inmortalizó uno de los momentos más lindos, cuando a través de un  Obvio SÍ!!… decidimos empezar a escribir esta historia"
                 </p>
             </div>
@@ -74,10 +86,9 @@
             <div class="container">
                 <ul class="content-title_index">
                     <h4>Resumen</h4>
-                    <li><a href="#content-date">Fecha</a></li>
-                    <li><a href="#assistance">Registro de Asistencia</a></li>
-                    <li><a href="#clothing">Código de vestimenta</a></li>
-                    <li><a href="#place">Lugar</a></li>
+                    <li><a href="#countdown">Fecha</a></li>
+                    <li><a href="#assistance">Ceremonia y Celebración</a></li>
+                    <li><a href="#party">Fiesta</a></li>
                     <li><a href="#gifts">Obsequios</a></li>
                     <li><a href="#gallery">Galería</a></li>
                 </ul>
@@ -86,7 +97,24 @@
 
         <div class="divisor"></div>
 
-        <p id="content-date">Noviembre 16, 2024</p>
+        <div id="countdown">
+            <div>
+              <span id="days"></span>
+              <div class="smalltext">Días</div>
+            </div>
+            <div>
+              <span id="hours"></span>
+              <div class="smalltext">Horas</div>
+            </div>
+            <div>
+              <span id="minutes"></span>
+              <div class="smalltext">Minutos</div>
+            </div>
+            <div>
+              <span id="seconds"></span>
+              <div class="smalltext">Segundos</div>
+            </div>
+        </div>
 
         <div class="divisor"></div>
 
@@ -99,14 +127,14 @@
         <div class="divisor"></div>
 
         <section class="content" id="assistance">
-            <h2 class="content__title content__title--number">Asistencia</h2>
-            <p class="content__subtitle">Registro de asistencia y más detalles</p>
+            <h2 class="content__title content__title--number">Ceremonia y Celebración</h2>
+            <p class="content__subtitle">Registro de asistencia</p>
 
             <div class="panel">
                 <div class="panel__item section">
-                    <div class="panel__item-imgwrap">
-                        <img class="panel__item-img" src="img/5.gif" alt="Some image"/>
-                        <div class="panel__item-text deactivated">
+                    <div class="panel__item-imgwrap-noi">
+                        <img class="panel__item-img" src="img/1.gif" alt="Some image"/>
+                        <div class="panel__item-text">
                             <h3 class="panel__item-title">
                                 <span>Confirma</span>
                                 <span>tu</span>
@@ -114,22 +142,23 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="panel__item-subtitle">
-                        <p>Ayúdanos registrando tu asistencia en el siguiente formulario, haz click<span id="attent_form"> aquí </span>para abrir</div>
+                    <div class="panel__item-subtitle-noi">
+                        <p>Ayúdanos registrando tu asistencia en el siguiente formulario, haz click<span id="attent_form"> aquí </span>para abrir</p>
+                    </div>
                 </div>
             </div>
+            <p class="content__subtitle">Código de Vestimenta</p>
         </section>
 
 
         <section class="content" id="clothing">
-            <h2 class="content__title content__title--number">Código de vestimenta</h2>
-            <p class="content__subtitle">Elegantes, cómodos y sencillos.
-                Les compartimos outfits adecuados.</p>
 
+            <p class="info">Haz click en una tarjeta para más información</p>
+            
             <div class="panel">
                 <div class="panel__item section">
                     <div class="panel__item-imgwrap">
-                        <img class="panel__item-img" src="img/1.jpg" alt="Some image"/>
+                        <img class="panel__item-img" src="img/2.jpg" alt="Some image"/>
                         <div class="panel__item-text deactivated">
                             <h3 class="panel__item-title">
                                 <span>Vestimenta</span>
@@ -139,6 +168,7 @@
                         </div>
                     </div>
                     <div class="panel__item-subtitle">
+                        <p>Elegantes, cómodos y sencillos. Les compartimos outfits adecuados.</p>
                         <span>Estilo Boho chic</span>
                             <ul>
                                 <li>Vestido midi o largo</li>
@@ -157,7 +187,7 @@
 
                 <div class="panel__item section">
                     <div class="panel__item-imgwrap">
-                        <img class="panel__item-img" src="img/2.jpg" alt="Some image"/>
+                        <img class="panel__item-img" src="img/3.jpg" alt="Some image"/>
                         <div class="panel__item-text deactivated">
                             <h3 class="panel__item-title">
                                 <span>Vestimenta</span>
@@ -184,8 +214,10 @@
         </section>
 
         <section class="content" id="place">
-            <h2 class="content__title content__title--number">Lugar</h2>
-            <p class="content__subtitle">Mapa del elemento</p>
+
+            <p class="content__subtitle">Lugar</p>
+
+            <p class="info">Haz click en la tarjeta para más información</p>
 
             <div class="panel">
                 <div class="panel__item section">
@@ -203,7 +235,6 @@
                         <p style="font-weight: bold;">Vía Azogues - Cuenca, Javier Loyola (Chuquipata), Ecuador</p>
                         <p>Un estilo en el que el amor ❤️ se respira y se aprecia en
                             cada detalle al aire libre, rodeados de un bosque.</p>
-                    
                     </div>
                 </div>
 
@@ -220,57 +251,44 @@
             </div>
         </section>
 
-        <section class="content" id="gifts">
-            <h2 class="content__title content__title--number">Obsequios</h2>
-            <p class="content__subtitle">Muchas gracias por tu granito de arena</p>
-
+        <section class="content" id="party">
+            <h2 class="content__title content__title--number">Fiesta</h2>
             <div class="panel">
                 <div class="panel__item section">
-                    <div class="panel__item-imgwrap">
-                        <img class="panel__item-img" src="img/8.jpg" alt="Some image"/>
-                        <div class="panel__item-text deactivated">
+                    <div class="panel__item-imgwrap-noi">
+                        <img class="panel__item-img" src="img/5.png" alt="Some image"/>
+                        <div class="panel__item-text">
                             <h3 class="panel__item-title">
-                                <span>Muchas</span>
-                                <span>Gracias</span>
+                                <span>Elije</span>
+                                <span>tu</span>
+                                <span>canción</span>
                             </h3>
                         </div>
-                    </div>
-                    <div class="panel__item-subtitle">
-                        <span>Aquí puedes hacer tu aporte</span> 
-                            <ul>
-                                <li style="font-weight: bolder; text-decoration: underline;">Banco xxxxx</li>
-                                <li>Cuenta Corriente: xxxxxxxx</li>
-                                <li>Nombre: Juan Sebastián Delgado Padrón</li>
-                                <li>Cédula: 0102030405</li>
-                                <li>Email: xxxx@gmail.com</li>
-                                <li>Teléfono: +593998461602</li>
-                            </ul>
-                    </div>
-                </div>
-
-                <div class="panel__item section">
-                    <div class="panel__item-imgwrap" id="disable">
-                        <img class="panel__item-img" src="img/9.png" alt="Some image"/>
-                        <div class="panel__item-text deactivated">
-                            <h3 class="panel__item-title">
-                                <span>Muchas</span>
-                                <span>Gracias</span>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="panel__item-subtitle">
-                        <span>Aquí puedes hacer tu aporte</span>
-                            <ul>
-                                <li style="font-weight: bolder; text-decoration: underline;">Banco xxxxx</li>
-                                <li>Cuenta Corriente: xxxxxxxx</li>
-                                <li>Nombre: Juan Sebastián Delgado Padrón</li>
-                                <li>Cédula: 0102030405</li>
-                                <li>Email: xxxx@gmail.com</li>
-                                <li>Teléfono: +593998461602</li>
-                            </ul>
                     </div>
                 </div>
             </div>
+            <div class="panel__item-subtitle-noi">
+                <span>¡Dinos! ¿Qué canción no puede faltar?</span>
+            </div>
+            <p>Haz click <span id="music_form"> aquí </span> para registrar tu sugerencia</p>
+        </section>
+
+        <section class="content" id="gifts">
+            <h2 class="content__title content__title--number">Obsequios</h2>
+            <div class="panel">
+                <div class="panel__item section">
+                    <div class="panel__item-imgwrap-noi">
+                        <img class="panel__item-img" src="img/6.png" alt="Some image"/>
+                        <div class="panel__item-text">
+                            <h3 class="panel__item-title">
+                                <span>Muchas</span>
+                                <span>Gracias</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Haz click <span id="gifts_info"> aquí </span> para más información</p>
         </section>
 
         <!-- Gallery -->
@@ -281,7 +299,7 @@
 
             <div class="panel">
                 <div class="panel__item section">
-                    <div class="panel__item-imgwrap">
+                    <div class="panel__item-imgwrap-noi">
                         <div class='pictures'>
                             <img class='picture' src='./img/gallery/8.jpg'>
                             <img class='picture' src='./img/gallery/7.jpg'> 
@@ -294,7 +312,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <p class="content__subtitle">Dots Memories</p>
+
+            <div class="info">¡Captura los momentos especiales de nuestra boda usando el código QR y comparte tus recuerdos con nosotros!</div>
+
+            <div class="panel__item section">
+                <div class="panel__item-imgwrap-noi">
+                    <a href="https://play.google.com/store/apps/details?id=social.onelife&hl=es_EC&pli=1" target="_blank">
+                        <img class="app_link" src="./img/7.png" alt="app_picture">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -312,5 +341,6 @@
     <script src="js/hero.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/countdown.js"></script>
 </body>
 </html>

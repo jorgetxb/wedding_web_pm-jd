@@ -3,6 +3,7 @@ document.getElementById("intro").addEventListener("click", () => {
       document.getElementById("intro").style.display = "none";
       document.body.classList.add('video-started');
       document.getElementById("video").play()
+      document.getElementById("audio").play();
   }
 )
 
@@ -25,5 +26,4 @@ document.querySelector("#nav").addEventListener('click', () => {
     }
   );
 });
-
 
