@@ -2,7 +2,7 @@ document.getElementById("intro").addEventListener("click", () => {
       document.getElementById("intro").style.opacity = "0";
       document.getElementById("intro").style.display = "none";
       document.body.classList.add('video-started');
-      document.getElementById("video").play()
+      /*document.getElementById("video").play()*/
       document.getElementById("audio").play();
   }
 )
