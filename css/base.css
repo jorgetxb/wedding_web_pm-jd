@@ -223,7 +223,7 @@ a {
 @media screen and (orientation: portrait) {
   #nav {
     bottom: 0;
-    margin: 0 auto 10vh auto;
+    margin: 0 auto 15vh auto;
   }
 }
 
