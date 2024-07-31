@@ -109,3 +109,19 @@ formw.addEventListener("click", () => {
   document.body.style.overflowY = "auto";
 })
 })
+
+/***Floating Bar***/
+
+const audio = document.getElementById('audio');
+
+document.getElementById("pause_button").addEventListener("click", () => {
+  document.getElementById("pause_button").style.display = "none";
+  document.getElementById("play_button").style.display = "block";
+  audio.pause();
+})
+
+document.getElementById("play_button").addEventListener("click", () => {
+  document.getElementById("play_button").style.display = "none";
+  document.getElementById("pause_button").style.display = "block";
+  audio.play();
+})

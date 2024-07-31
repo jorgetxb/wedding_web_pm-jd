@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
-<body>
+<body class="video-started">
 
     <div id="loader">
         <div id="loader_lottie">
@@ -49,14 +49,10 @@
                         <p class="frame__content-text">Noviembre 16, 2024</p>
                     </div>
                     <nav class="frame__switch" id="nav">
-                        <p class="frame__switch-item">Más Info</p>
+                        <img style="width:120px; height:120px;" src="./img/music_icon.svg" alt="music_icon">
                     </nav>
                 </div>
             </div>
-    
-            <button class="frame__button" id="intro">
-                <svg viewBox="0 0 60 60" width="120" height="120"><path d="M45.563 29.174l-22-15A1 1 0 0022 15v30a.999.999 0 001.563.826l22-15a1 1 0 000-1.652zM24 43.107V16.893L43.225 30 24 43.107z"/><path d="M30 0C13.458 0 0 13.458 0 30s13.458 30 30 30 30-13.458 30-30S46.542 0 30 0zm0 58C14.561 58 2 45.439 2 30S14.561 2 30 2s28 12.561 28 28-12.561 28-28 28z"/></svg>
-            </button>
         </div>
 
         <!-- forms -->
@@ -76,13 +72,29 @@
             </div>
          </div>
 
+        <!-- nav -->
+
+        <div class="fbar_container">
+            <div class="floating_bar">
+                <button id="play_button">
+                    <img src="./img/play.svg" alt="">
+                </button>
+                <button id="pause_button">
+                    <img src="./img/pause.svg" alt="">
+                </button>
+                <button id="back_button">
+                    <img src="./img/back.svg" alt="">
+                </button>
+            </div>
+        </div>
+
         <!-- menu -->
         <section class="content">
             <img id="hero_img" src="./img/hero_img.png" alt="info_main">
             <div id="welcome">
                 <h1 class="content-title">Paula & Juan</h1>
                 <p class="content-date">Noviembre 16, 2024 - <span style="font-weight: bolder;">4:00 pm</span></p>
-                <p class="content-text">"Esta foto, inmortalizó uno de los momentos más lindos, cuando a través de un  Obvio SÍ!!… decidimos empezar a escribir esta historia"
+                <p class="content-text">"Esta foto, inmortalizó uno de los momentos más lindos, cuando a través de un Obvio ¡SÍ!… decidimos empezar a escribir esta historia"
                 </p>
             </div>
         </section>
