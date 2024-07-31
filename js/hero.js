@@ -1,13 +1,6 @@
-/*document.getElementById("intro").addEventListener("click", () => {
-      document.getElementById("intro").style.opacity = "0";
-      document.getElementById("intro").style.display = "none";
-      document.body.classList.add('video-started');
-      document.getElementById("video").play();
-      document.getElementById("audio").play();
-  }
-)*/
-
 document.querySelector("#nav").addEventListener('click', () => {
+  document.getElementById("play_button").style.display = "none";
+  document.getElementById("pause_button").style.display = "block";
   document.getElementById("audio").play();
   var hero = $("#video_container");
   var unlock = document.body;
