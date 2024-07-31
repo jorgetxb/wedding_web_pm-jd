@@ -117,8 +117,8 @@ a {
 }
 
 .frame {
+  height: 100vh;
   bottom: 0;
-  margin: 0 0 15vh 0;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -164,7 +164,17 @@ a {
 
 .frame__content {
   text-align: center;
+  bottom: 15vh;
+  position: absolute;
+  width: inherit;
 }
+
+@media screen and (orientation: portrait) {
+  .frame__content {
+    position: initial;
+  }
+}
+
 
 .frame__content-title {
   margin: 0;
